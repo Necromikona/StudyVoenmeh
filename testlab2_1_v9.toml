@@ -1,0 +1,44 @@
+application = ['lab2_1_v9.exe']
+encoding = "cp1251"
+
+[[testSuite]]
+    number = 1
+    name = 'Тест целых строк'
+    input=["Это первая строка","Это вторая строка"]
+    output = ['[\S\s]*Это строка\s*']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 2
+    name = 'Тест строк с числами'
+    input = ["123","Прибыль составила 123 рубля"]
+    output = ['[\S\s]*123\s*']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 3
+    name = 'Тест больших строк'
+    input = ["12345678979eyuevgfuoihljwg98oeqilvw слово wedvjjhiejkv","hdcwiosibkvbhiwpjedhv hjdsuihvjkbpijcskjdn hkvdiofhkjbhoiewbjk слово"]
+    output = ['[\S\s]*слово\s*']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 4
+    name = 'Тест строки с отрицательными числами'
+    input = ["12345678979eyuevgfuoihljwg98oeqilvw -666 wedvjjhiejkv","hdcwiosibkvbhiwpjedhv hjdsuihvjkbpijcskjdn hkvdiofhkjbhoiewbjk -666"]
+    output = ['[\S\s]*-666\s*']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 5
+    name = 'Тест пустых строк'
+    input = ["",""]
+    output = ['']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 6
+    name = 'Тест строк с вещественными числами'
+    input = ["12345678979eyuevgfuoihljwg98oeqilvw 12.34  wedvjjhiejkv","hdcwiosibkvbhiwpjedhv 12.34 hjdsuihvjkbpijcskjdn hkvdiofhkjbhoiewbjk слово"]
+    output = ['[\S\s]*12.34*']
+    timeout = 0.5
