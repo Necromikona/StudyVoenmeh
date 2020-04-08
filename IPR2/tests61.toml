@@ -1,0 +1,44 @@
+application = ['lab61.exe']
+encoding = "866"
+
+[[testSuite]]
+    number = 1
+    name = 'Тест не пустой строки'
+    input = "qwerty"
+    output = '[\S\s]*Некорректный ввод[\S\s]*'
+    timeout = 0.5
+
+[[testSuite]]
+    number = 2
+    name = 'Тест числа'
+    input = "123"
+    output = '[\S\s]*Число можно представить в формате unsigned short int[\S\s]*'
+    timeout = 0.5
+
+[[testSuite]]
+    number = 3
+    name = 'Тест большого числа'
+    input = "123456789"
+    output = '[\S\s]*Число нельзя представить в формате unsigned short int[\S\s]*'
+    timeout = 0.5
+
+[[testSuite]]
+    number = 4
+    name = 'Тест строки с цифрами'
+    input = "123asd"
+    output = '[\S\s]*Некорректный ввод[\S\s]*'
+    timeout = 0.5
+
+[[testSuite]]
+    number = 5
+    name = 'Тест отрицательного числа'
+    input = "-123"
+    output = '[\S\s]*Некорректный ввод[\S\s]*'
+    timeout = 0.5
+
+[[testSuite]]
+    number = 6
+    name = 'Тест вещественного числа'
+    input = "12.34"
+    output = '[\S\s]*Некорректный ввод[\S\s]*'
+    timeout = 0.5

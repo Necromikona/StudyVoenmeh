@@ -1,0 +1,44 @@
+application = ['./lab2_1_v6']
+encoding = "utf-8"
+
+[[testSuite]]
+    number = 1
+    name = 'Тест правильной даты'
+    input=["12.02.1995"]
+    output = ['[\S\s]*13.02.1995\s*']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 2
+    name = 'Тест неправильного формата даты № 4'
+    input = ["91.12.2000"]
+    output = ['[\S\s]*Неверный формат ввода4*']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 3
+    name = 'Тест неправильного формата даты № 1'
+    input = ["-1.12.2000"]
+    output = ['[\S\s]*Неверный формат ввода1*']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 4
+    name = 'Тест неправильного формата даты № 3'
+    input = ["1.12.2000"]
+    output = ['[\S\s]*Неверный формат ввода3*']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 5
+    name = 'Тест неправильного формата даты № 1 с использованием букв'
+    input = ["0a.b0.2000"]
+    output = ['[\S\s]*Неверный формат ввода1*']
+    timeout = 0.5
+
+[[testSuite]]
+    number = 6
+    name = 'Тест строк с вещественными числами'
+    input = ["30.10.2000"]
+    output = ['[\S\s]*Неверный формат ввода5\s*']
+    timeout = 0.5
