@@ -24,9 +24,11 @@ jobs:
     # Runs a single command using the runners shell
     - name: Запуск на Linux
       run: echo Приветствую Вас в своем Гитхабе!
-    - name: Execure few commands
+    - name: Подробнее о приложении
       run: |
         echo "Application name:${{ env.APPLICATION_NAME }}"
         echo "PACKAGE_SHA:${{ env.PACKAGE_SHA }}"
+    - name: Просмотр содержимого папки
+      run: ls -la
   
 
