@@ -34,9 +34,5 @@ jobs:
     - name: Просмотр содержимого папки
       run: ls -la
       
-    - name: Запуск программы под докерос
-      run: |
-        cd IPR2/3\ вариант/
-        echo"cnhjdh sdfkjklsd" >./lab2_1_v3
-        
+   
 
