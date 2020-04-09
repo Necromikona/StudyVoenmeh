@@ -37,5 +37,6 @@ jobs:
     - name: Запуск программы под докерос
       run: |
         cd IPR2/3\ вариант/
-        python lab2_1_v9.py
+        pip install toml
+        python lab2_1_v3.py
 
