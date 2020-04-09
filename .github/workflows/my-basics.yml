@@ -28,6 +28,9 @@ jobs:
       run: |
         echo "Application name:${{ env.APPLICATION_NAME }}"
         echo "PACKAGE_SHA:${{ env.PACKAGE_SHA }}"
+    - name: Гитклон репозитория
+      uses: actions/checkout@v1
+    
     - name: Просмотр содержимого папки
       run: ls -la
   
