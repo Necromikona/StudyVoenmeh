@@ -23,13 +23,4 @@ jobs:
     - name: Запуск на Linux
       run: echo Приветствую Вас в своем Гитхабе!
   
-  Deploy:
-    
-    runs-on: windows
- 
-    steps:
-    
-    # Runs a single command using the runners shell
-    - name: Запуск на Windows
-      run: print(Приветствую Вас в своем Гитхабе!)
-  
+
