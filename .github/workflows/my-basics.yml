@@ -1,8 +1,10 @@
 #Copyleft (c) be Aleksey Fedorov
-
-
-
 name: My_GitHubActions
+env:
+  APPLICATION_NAME: "Your file"
+  PACKAGE_SHA    : "your-application-sha:${{ github.sha }}"
+
+
 
 on:
   push:
@@ -22,5 +24,9 @@ jobs:
     # Runs a single command using the runners shell
     - name: Запуск на Linux
       run: echo Приветствую Вас в своем Гитхабе!
+    - name: Execure few commands
+      run: |
+        echo "Application name:${{ env.APPLICATION_NAME }}"
+        echo "PACKAGE_SHA:${{ env.PACKAGE_SHA }}"
   
 
